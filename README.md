@@ -608,4 +608,53 @@ Microsoft-specific claims should be validated against appropriate Microsoft Lear
 
 The generated architecture should be reviewed by the relevant technical SMEs before being included in a final proposal.
 
-**The tool provides the starting point — human expertise makes the final response.**
+
+# 🚀 Installation –  Steps
+
+### 1️⃣ Create the Agent
+
+* Go to [Copilot Studio]((https://copilotstudio.microsoft.com/environments))
+* Select the required **Environment**.
+* Go to **Agents → Create**.
+* Select **Create a new agent**.
+* Enter the agent name: **RFP Response Assistant**.
+* Add the agent description/instructions provided below.
+* Select **Create**.
+
+<img width="1898" height="818" alt="image" src="https://github.com/user-attachments/assets/beaa2be7-d4dd-4b1f-847a-8f41e51409a6" />
+
+### 2️⃣ Upload the Skill
+
+* Open the newly created agent.
+* Go to **Skills**.
+* Select **Add Skill / Upload Skill**.
+* Upload **`D365 RFP Response - Upload Clean.zip`**.
+* Confirm the skill is added successfully.
+
+<img width="1488" height="825" alt="image" src="https://github.com/user-attachments/assets/ae94f596-e086-400c-a778-2137e9dd16c1" />
+
+### 3️⃣ Add MCP Tools
+
+* Go to **Tools → Add Tool**.
+* Add **Microsoft Learn MCP**.
+* URL https://learn.microsoft.com/api/mcp
+* Add **Draw.io MCP**.
+* Save the configuration.
+* URL : https://mcp.draw.io/mcp
+
+### 4️⃣ Test in Preview
+
+* Open **Preview**.
+* Upload the sample **RFP Response Excel workbook**.
+* Enter the command:
+
+> **Generate the RFP response based on the uploaded workbook.**
+
+* Submit the request.
+
+### 5️⃣ Get the Output
+
+
+
+The agent will process the workbook and generate the **HTML RFP response**.
+
