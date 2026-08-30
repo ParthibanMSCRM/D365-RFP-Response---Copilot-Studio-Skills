@@ -659,5 +659,10 @@ The generated architecture should be reviewed by the relevant technical SMEs bef
 
 
 
-The agent will process the workbook and generate the **HTML RFP response**.
+The agent will process the workbook and generate the **HTML RFP response**. 
+ https://github.com/ParthibanMSCRM/D365-RFP-Response---Copilot-Studio-Skills/blob/main/RFP_Response.html
+
+<img width="1808" height="860" alt="image" src="https://github.com/user-attachments/assets/0b6e5597-79b9-4fe4-bac5-9a9557aaec13" />
+
+
 
