@@ -1,0 +1,783 @@
+<!doctype html> <html lang="en"> <head> <meta charset="utf-8" /> <meta name="viewport" content="width=device-width, initial-scale=1" /> <title>D365 RFP Response - Sample Proposal</title> <style> :root { --navy: #071d49; --blue: #0067b1; --cyan: #00a8e8; --orange: #ff6b35; --green: #11845b; --amber: #b66a00; --ink: #172033; --muted: #607087; --bg: #f4f7fb; --card: #ffffff; --line: #dce5ef; }
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font: 15px/1.6 "Segoe UI", Arial, sans-serif;
+  color: var(--ink);
+  background: var(--bg);
+}
+
+.top {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: rgba(7, 29, 73, 0.97);
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 10px 5vw;
+  box-shadow: 0 3px 14px #0003;
+  flex-wrap: wrap;
+}
+
+.brand {
+  font-size: 24px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.top nav {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.top nav a {
+  color: #eaf6ff;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 700;
+  border: 1px solid #ffffff30;
+  background: #ffffff14;
+  border-radius: 999px;
+  padding: 6px 10px;
+  line-height: 1;
+}
+
+.hero {
+  min-height: 430px;
+  padding: 76px 7vw 56px;
+  color: white;
+  background: linear-gradient(125deg, #06183d 0%, #073d78 56%, #0089c8 100%);
+  display: grid;
+  grid-template-columns: 1.35fr 0.65fr;
+  gap: 45px;
+  align-items: center;
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: #7fe2ff;
+  font-weight: 700;
+}
+
+.hero h1 {
+  font-size: clamp(38px, 6vw, 68px);
+  line-height: 1.04;
+  margin: 12px 0;
+}
+
+.hero p {
+  font-size: 19px;
+  max-width: 780px;
+}
+
+.meta {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.meta div {
+  background: #ffffff16;
+  border: 1px solid #ffffff35;
+  border-radius: 13px;
+  padding: 14px;
+}
+
+.meta b {
+  display: block;
+  color: #8ee7ff;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+.score {
+  background: white;
+  color: var(--ink);
+  border-radius: 20px;
+  padding: 27px;
+  box-shadow: 0 20px 45px #00142f55;
+}
+
+.ring {
+  width: 160px;
+  height: 160px;
+  margin: auto;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: conic-gradient(var(--green) 0 86%, #e5edf4 86%);
+}
+
+.ring:after {
+  content: "86%\A GO";
+  white-space: pre;
+  text-align: center;
+  font-weight: 800;
+  font-size: 26px;
+  line-height: 1.1;
+  width: 124px;
+  height: 124px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: white;
+}
+
+.pill {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 15px;
+  background: #e7f7f1;
+  color: var(--green);
+  font-weight: 700;
+}
+
+main {
+  max-width: 1200px;
+  margin: auto;
+  padding: 45px 24px;
+}
+
+.section {
+  margin: 0 0 55px;
+  scroll-margin-top: 90px;
+}
+
+.section h2 {
+  font-size: 32px;
+  color: var(--navy);
+  margin-bottom: 8px;
+}
+
+.section h2:after {
+  content: "";
+  display: block;
+  width: 55px;
+  height: 4px;
+  background: var(--orange);
+  margin-top: 8px;
+}
+
+.lead {
+  font-size: 18px;
+  color: #40506a;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 21px;
+  box-shadow: 0 5px 18px #16345a0b;
+}
+
+.card h3 {
+  margin-top: 0;
+  color: var(--blue);
+}
+
+.kpi {
+  font-size: 30px;
+  font-weight: 800;
+  color: var(--navy);
+}
+
+.solution-diagram {
+  background: white;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  padding: 20px;
+  margin: 22px 0;
+  box-shadow: 0 8px 24px #12345a16;
+  overflow: hidden;
+}
+
+.diagram-title {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: center;
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 12px;
+  margin-bottom: 18px;
+}
+
+.diagram-title b {
+  color: var(--navy);
+  font-size: 18px;
+}
+
+.diagram-badge {
+  background: #e7f7f1;
+  color: var(--green);
+  border-radius: 999px;
+  padding: 5px 10px;
+  font-size: 12px;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+.diagram-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.1fr 1.1fr 1fr;
+  gap: 14px;
+  align-items: stretch;
+}
+
+.diagram-lane {
+  border: 1px solid #dbe7f2;
+  border-radius: 15px;
+  background: linear-gradient(180deg, #f9fcff, #eef6fc);
+  padding: 12px;
+  min-height: 255px;
+}
+
+.diagram-lane h3 {
+  margin: 0 0 10px;
+  font-size: 13px;
+  letter-spacing: 0.5px;
+  color: var(--navy);
+  text-transform: uppercase;
+}
+
+.diagram-node {
+  background: white;
+  border: 1px solid #ccddeb;
+  border-left: 5px solid var(--blue);
+  border-radius: 12px;
+  padding: 11px;
+  margin: 10px 0;
+  box-shadow: 0 3px 10px #0a31550e;
+}
+
+.diagram-node strong {
+  display: block;
+  color: var(--navy);
+  margin-bottom: 4px;
+}
+
+.diagram-node small {
+  color: var(--muted);
+}
+
+.diagram-node.accent {
+  border-left-color: var(--orange);
+}
+
+.diagram-node.good {
+  border-left-color: var(--green);
+}
+
+.diagram-foot {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.diagram-foot div {
+  background: #f7fbff;
+  border: 1px dashed #b9cde1;
+  border-radius: 12px;
+  padding: 11px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 3px 14px #1232;
+  margin-top: 12px;
+}
+
+th {
+  background: var(--navy);
+  color: white;
+  text-align: left;
+  padding: 13px;
+}
+
+td {
+  padding: 12px 13px;
+  border-bottom: 1px solid var(--line);
+  vertical-align: top;
+}
+
+tr:hover td {
+  background: #f0f8ff;
+}
+
+.notice {
+  border-left: 5px solid var(--amber);
+  background: #fff6e8;
+  padding: 15px 18px;
+  border-radius: 8px;
+}
+
+.success {
+  border-left-color: var(--green);
+  background: #eefaf5;
+}
+
+footer {
+  background: var(--navy);
+  color: #cbd9ef;
+  padding: 35px 7vw;
+}
+
+@media (max-width: 900px) {
+  .hero {
+    grid-template-columns: 1fr;
+  }
+
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .diagram-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .diagram-foot {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 560px) {
+  .grid,
+  .meta {
+    grid-template-columns: 1fr;
+  }
+
+  .top {
+    position: static;
+  }
+
+  .top nav a {
+    font-size: 11px;
+    padding: 6px 8px;
+  }
+}
+
+</style>
+
+</head> <body> <header class="top"> <div class="brand">D365</div> <nav> <a href="#summary">Summary</a> <a href="#solution">Solution</a> <a href="#architecture">Architecture</a> <a href="#coverage">Coverage</a> <a href="#implementation">Delivery</a> <a href="#risks">Risks</a> <a href="#accuracy">Accuracy</a> </nav> </header> <section class="hero"> <div> <div class="eyebrow">Sample proposal response</div> <h1>D365 Customer Engagement Transformation</h1> <p> A sample response for a generic organization seeking a Dynamics 365-based customer engagement, sales, service and reporting platform. </p>
+
+  <div class="meta">
+    <div><b>Client</b>Example Customer Group</div>
+    <div><b>Prepared by</b>Generic Proposal Team</div>
+    <div><b>Response type</b>Sample HTML proposal</div>
+    <div><b>Version</b>Draft for internal review</div>
+  </div>
+</div>
+
+<aside class="score">
+  <div class="ring"></div>
+  <h3>Recommendation: <span class="pill">GO</span></h3>
+  <p><b>Assessment:</b> Strong alignment with Microsoft Dynamics 365 and Power Platform capabilities, subject to licensing and discovery validation.</p>
+</aside>
+</section> <main> <section id="summary" class="section"> <h2>Executive Summary</h2> <p class="lead"> Example Customer Group requires a modern customer engagement platform to improve sales productivity, customer service quality, pipeline visibility and management reporting. The proposed solution uses Dynamics 365 Sales, Dynamics 365 Customer Service, Dataverse, Power Platform and Microsoft Entra ID to provide a secure, scalable and governed business application platform. </p>
+
+  <div class="grid">
+    <div class="card">
+      <div class="kpi">42</div>
+      <h3>Sample requirements</h3>
+      <p>Functional, integration, security, reporting and support requirements grouped for review.</p>
+    </div>
+    <div class="card">
+      <div class="kpi">8</div>
+      <h3>Workstreams</h3>
+      <p>Discovery, solution design, configuration, integration, migration, testing, training and support.</p>
+    </div>
+    <div class="card">
+      <div class="kpi">12</div>
+      <h3>Weeks discovery-to-MVP</h3>
+      <p>Indicative timeline for a controlled minimum viable release, subject to confirmed scope.</p>
+    </div>
+  </div>
+</section>
+
+<section id="solution" class="section">
+  <h2>Proposed Solution</h2>
+  <p class="lead">
+    We propose a Dynamics 365 Customer Engagement solution that gives sales, service and leadership teams
+    a single governed platform for customer records, activities, pipeline, cases, service interactions and reporting.
+  </p>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Capability</th>
+        <th>Proposed approach</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Sales management</td>
+        <td>Use Dynamics 365 Sales for accounts, contacts, leads, opportunities, activities, pipeline tracking and forecasting.</td>
+      </tr>
+      <tr>
+        <td>Sales productivity</td>
+        <td>Evaluate Sales accelerator, sequences and guided selling features where licensing and business process fit are confirmed.</td>
+      </tr>
+      <tr>
+        <td>Customer service</td>
+        <td>Use Dynamics 365 Customer Service for case management, queues, service routing, knowledge articles and SLA tracking.</td>
+      </tr>
+      <tr>
+        <td>Data platform</td>
+        <td>Use Microsoft Dataverse as the core business data platform with role-based access and auditable data changes.</td>
+      </tr>
+      <tr>
+        <td>Automation</td>
+        <td>Use Power Automate for approvals, notifications, task automation and integration triggers.</td>
+      </tr>
+      <tr>
+        <td>Reporting</td>
+        <td>Use Dynamics 365 dashboards and Power BI for operational reporting, executive dashboards and trend analysis.</td>
+      </tr>
+      <tr>
+        <td>Identity and access</td>
+        <td>Use Microsoft Entra ID for identity, single sign-on and conditional access subject to tenant policy.</td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+<section id="architecture" class="section">
+  <h2>Interactive Solution Architecture Diagram</h2>
+  <p class="lead">
+    The diagram below is embedded directly in the HTML response. In the final version, this section should be
+    replaced or enhanced using the Draw.io MCP server and the supplied Draw.io HTML template.
+  </p>
+
+  <div class="solution-diagram" role="img" aria-label="Embedded D365 solution architecture diagram">
+    <div class="diagram-title">
+      <b>D365 RFP Response Architecture</b>
+      <span class="diagram-badge">Embedded diagram preview</span>
+    </div>
+
+    <div class="diagram-grid">
+      <div class="diagram-lane">
+        <h3>Users and channels</h3>
+        <div class="diagram-node">
+          <strong>Sales users</strong>
+          <small>Manage leads, opportunities, accounts, contacts and activities.</small>
+        </div>
+        <div class="diagram-node">
+          <strong>Service agents</strong>
+          <small>Manage customer cases, queues, SLAs and knowledge articles.</small>
+        </div>
+        <div class="diagram-node">
+          <strong>Leaders</strong>
+          <small>Review dashboards, forecasts, service performance and compliance metrics.</small>
+        </div>
+      </div>
+
+      <div class="diagram-lane">
+        <h3>Business applications</h3>
+        <div class="diagram-node accent">
+          <strong>Dynamics 365 Sales</strong>
+          <small>Lead-to-opportunity, guided selling, activity tracking and pipeline visibility.</small>
+        </div>
+        <div class="diagram-node accent">
+          <strong>Dynamics 365 Customer Service</strong>
+          <small>Case management, routing, service history, knowledge and SLA tracking.</small>
+        </div>
+        <div class="diagram-node">
+          <strong>Power Apps</strong>
+          <small>Role-specific model-driven apps and extensions over Dataverse.</small>
+        </div>
+      </div>
+
+      <div class="diagram-lane">
+        <h3>Platform and data</h3>
+        <div class="diagram-node good">
+          <strong>Microsoft Dataverse</strong>
+          <small>Core data model, security roles, audit history and business rules.</small>
+        </div>
+        <div class="diagram-node">
+          <strong>Power Automate</strong>
+          <small>Approvals, notifications, integration workflows and process automation.</small>
+        </div>
+        <div class="diagram-node">
+          <strong>Power BI</strong>
+          <small>Operational reporting, leadership dashboards and trend analysis.</small>
+        </div>
+      </div>
+
+      <div class="diagram-lane">
+        <h3>Governance and validation</h3>
+        <div class="diagram-node good">
+          <strong>Microsoft Entra ID</strong>
+          <small>Identity, SSO, conditional access and access governance.</small>
+        </div>
+        <div class="diagram-node">
+          <strong>Microsoft Learn MCP</strong>
+          <small>Validates Microsoft capability, licensing and product statements.</small>
+        </div>
+        <div class="diagram-node">
+          <strong>Draw.io MCP</strong>
+          <small>Creates editable architecture using the Draw.io HTML template.</small>
+        </div>
+      </div>
+    </div>
+
+    <div class="diagram-foot">
+      <div><b>Trust boundary:</b> identity, security roles and data access must be validated during discovery.</div>
+      <div><b>Integration boundary:</b> external systems require confirmed APIs, ownership and environments.</div>
+      <div><b>Evidence boundary:</b> Microsoft product claims require Microsoft Learn validation before submission.</div>
+    </div>
+  </div>
+
+  <div class="notice">
+    <b>Draw.io MCP instruction:</b> Use the Draw.io MCP server at
+    <code>https://mcp.draw.io/mcp</code> with the supplied Draw.io HTML template to generate the final editable
+    architecture diagram. The final report should show the rendered diagram, not Mermaid source code.
+  </div>
+</section>
+
+<section id="coverage" class="section">
+  <h2>Requirement Coverage</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Requirement area</th>
+        <th>Sample count</th>
+        <th>Response position</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Sales process and pipeline</td>
+        <td>9</td>
+        <td>Covered through Dynamics 365 Sales configuration and process design.</td>
+      </tr>
+      <tr>
+        <td>Customer service</td>
+        <td>7</td>
+        <td>Covered through Dynamics 365 Customer Service case, queue and SLA capabilities.</td>
+      </tr>
+      <tr>
+        <td>Security and access</td>
+        <td>6</td>
+        <td>Covered through Microsoft Entra ID, Dataverse security roles and governance controls.</td>
+      </tr>
+      <tr>
+        <td>Reporting and analytics</td>
+        <td>5</td>
+        <td>Covered through Dynamics dashboards and Power BI reporting.</td>
+      </tr>
+      <tr>
+        <td>Integration and migration</td>
+        <td>8</td>
+        <td>Subject to confirmed source systems, APIs, data quality and migration scope.</td>
+      </tr>
+      <tr>
+        <td>Training and support</td>
+        <td>7</td>
+        <td>Covered through role-based training, adoption support and post-go-live care.</td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+<section id="implementation" class="section">
+  <h2>Implementation Approach</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Phase</th>
+        <th>Indicative duration</th>
+        <th>Key outcomes</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Discovery and planning</td>
+        <td>2 weeks</td>
+        <td>Confirm scope, stakeholders, success measures, data sources, licensing assumptions and delivery roadmap.</td>
+      </tr>
+      <tr>
+        <td>Solution design</td>
+        <td>2 weeks</td>
+        <td>Define target architecture, security model, process flows, integrations and reporting approach.</td>
+      </tr>
+      <tr>
+        <td>Configuration and build</td>
+        <td>4 weeks</td>
+        <td>Configure Dynamics 365 apps, Dataverse tables, forms, views, workflows, dashboards and security roles.</td>
+      </tr>
+      <tr>
+        <td>Integration and migration</td>
+        <td>3 weeks</td>
+        <td>Implement agreed integrations, migration mapping, cleansing, test loads and reconciliation.</td>
+      </tr>
+      <tr>
+        <td>Testing and readiness</td>
+        <td>2 weeks</td>
+        <td>Complete system testing, UAT, defect remediation, training and go-live readiness checks.</td>
+      </tr>
+      <tr>
+        <td>Go-live and support</td>
+        <td>1 week+</td>
+        <td>Launch support, hypercare, adoption monitoring and continuous improvement backlog.</td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+<section id="risks" class="section">
+  <h2>Risks and Assumptions</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Area</th>
+        <th>Risk or assumption</th>
+        <th>Mitigation</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Licensing</td>
+        <td>Required Dynamics 365 and Power Platform licenses must be confirmed.</td>
+        <td>Validate licensing during discovery and confirm any premium feature dependencies.</td>
+      </tr>
+      <tr>
+        <td>Sales accelerator</td>
+        <td>Capability availability may depend on product licensing and tenant configuration.</td>
+        <td>Validate against Microsoft Learn and target tenant configuration before final commitment.</td>
+      </tr>
+      <tr>
+        <td>Integration</td>
+        <td>External system APIs and data ownership are not yet confirmed.</td>
+        <td>Complete integration discovery and confirm API access, security and environments.</td>
+      </tr>
+      <tr>
+        <td>Data migration</td>
+        <td>Historical data quality may affect migration effort.</td>
+        <td>Run sample profiling, cleansing and test migration before final migration estimate.</td>
+      </tr>
+      <tr>
+        <td>Change management</td>
+        <td>User adoption may be impacted if business process changes are not managed.</td>
+        <td>Use role-based training, champion users, communication planning and adoption reporting.</td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+<section id="accuracy" class="section">
+  <h2>Microsoft Learn / MSDN Accuracy Register</h2>
+  <p class="lead">
+    Microsoft-specific claims should be validated using the Microsoft Learn MCP server before final submission.
+    This sample shows the expected accuracy structure.
+  </p>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Validation area</th>
+        <th>Evidence approach</th>
+        <th>Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Dynamics 365 Sales</td>
+        <td>Query Microsoft Learn for Sales app capabilities, Sales accelerator and licensing dependencies.</td>
+        <td>Pending final MCP validation</td>
+      </tr>
+      <tr>
+        <td>Dynamics 365 Customer Service</td>
+        <td>Query Microsoft Learn for case management, queues, SLA and knowledge management capabilities.</td>
+        <td>Pending final MCP validation</td>
+      </tr>
+      <tr>
+        <td>Dataverse</td>
+        <td>Query Microsoft Learn for Dataverse security, auditing, table model and governance capabilities.</td>
+        <td>Pending final MCP validation</td>
+      </tr>
+      <tr>
+        <td>Power Platform</td>
+        <td>Query Microsoft Learn for Power Automate, Power Apps, connectors and environment governance.</td>
+        <td>Pending final MCP validation</td>
+      </tr>
+      <tr>
+        <td>Microsoft Entra ID</td>
+        <td>Query Microsoft Learn for SSO, identity, conditional access and role-based access statements.</td>
+        <td>Pending final MCP validation</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="notice success">
+    <b>Accuracy rule:</b> Microsoft Learn is the authoritative source for Microsoft product documentation.
+    Dataverse MCP or Dynamics 365 Sales MCP should be used for environment-specific data and actions.
+    Community forums may support research but should not be used as primary RFP evidence.
+  </div>
+</section>
+
+<section class="section">
+  <h2>Sample Commercial Summary</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Workstream</th>
+        <th>Indicative estimate</th>
+        <th>Notes</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Discovery and design</td>
+        <td>$45,000 - $75,000</td>
+        <td>Depends on stakeholder availability and confirmed scope.</td>
+      </tr>
+      <tr>
+        <td>Dynamics 365 configuration</td>
+        <td>$120,000 - $220,000</td>
+        <td>Includes sales and service configuration for agreed MVP scope.</td>
+      </tr>
+      <tr>
+        <td>Integration and migration</td>
+        <td>$80,000 - $180,000</td>
+        <td>Subject to source systems, API access and migration complexity.</td>
+      </tr>
+      <tr>
+        <td>Testing, training and go-live</td>
+        <td>$50,000 - $90,000</td>
+        <td>Includes UAT support, readiness and hypercare planning.</td>
+      </tr>
+      <tr>
+        <td><b>Total indicative range</b></td>
+        <td><b>$295,000 - $565,000</b></td>
+        <td>Sample only. Final pricing requires discovery and commercial approval.</td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+</main> <footer> <div><strong>Prepared by:</strong> Generic Proposal Team</div> <div><strong>Document type:</strong> Sample D365 RFP response HTML</div> <div><strong>Confidence:</strong> Draft only. Requires Microsoft Learn validation, tenant discovery and SME review before client submission.</div> </footer> </body> </html>
+
