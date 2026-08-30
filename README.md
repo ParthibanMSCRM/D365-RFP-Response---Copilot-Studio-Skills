@@ -641,6 +641,9 @@ The generated architecture should be reviewed by the relevant technical SMEs bef
 * Add **Draw.io MCP**.
 * Save the configuration.
 * URL : https://mcp.draw.io/mcp
+<img width="1427" height="857" alt="image" src="https://github.com/user-attachments/assets/41849d83-415c-4c49-a7e0-1664472f3cd7" />
+<img width="1444" height="906" alt="image" src="https://github.com/user-attachments/assets/f4fa0ca3-6d5e-4c1d-949f-183c04ec6f28" />
+
 
 ### 4️⃣ Test in Preview
 
