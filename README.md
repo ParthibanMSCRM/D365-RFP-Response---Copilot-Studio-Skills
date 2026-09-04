@@ -662,7 +662,19 @@ The generated architecture should be reviewed by the relevant technical SMEs bef
 The agent will process the workbook and generate the **HTML RFP response**. 
  https://github.com/ParthibanMSCRM/D365-RFP-Response---Copilot-Studio-Skills/blob/main/RFP_Response.html
 
-<img width="1808" height="860" alt="image" src="https://github.com/user-attachments/assets/0b6e5597-79b9-4fe4-bac5-9a9557aaec13" />
+<img width="1891" height="987" alt="image" src="https://github.com/user-attachments/assets/5a1a0b4b-02bb-4565-a5ff-3b40a9216cb8" />
+<img width="1896" height="923" alt="image" src="https://github.com/user-attachments/assets/1f0f2e12-a088-4ad3-a374-5c191b57627a" />
+<img width="1900" height="932" alt="image" src="https://github.com/user-attachments/assets/3221c4eb-e0ce-4936-b5c5-55a16cde731b" />
+<img width="1889" height="698" alt="image" src="https://github.com/user-attachments/assets/088c371c-53fa-47ce-a058-aecc152cea5a" />
+<img width="1892" height="927" alt="image" src="https://github.com/user-attachments/assets/c93bd82e-b0bc-43e5-b5fb-8f61aa0b8529" />
+<img width="1897" height="922" alt="image" src="https://github.com/user-attachments/assets/fa8c62d2-d755-41d1-a44e-b95336a2b00f" />
+<img width="1886" height="846" alt="image" src="https://github.com/user-attachments/assets/a9940fe9-d66a-450d-88ab-664b92a75488" />
+<img width="1882" height="922" alt="image" src="https://github.com/user-attachments/assets/6034818c-da84-47d1-af58-d343fa5dd130" />
+<img width="1897" height="924" alt="image" src="https://github.com/user-attachments/assets/16f50429-09f5-4abc-894b-7f9a3d0c4c77" />
+
+
+
+
 
 
 
